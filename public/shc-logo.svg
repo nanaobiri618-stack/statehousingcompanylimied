@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 60" fill="none">
+  <!-- House icon -->
+  <path d="M25 35L10 25L25 15L40 25L25 35Z" fill="#0D47A1"/>
+  <path d="M15 35V48H35V35" fill="#0D47A1"/>
+  <rect x="21" y="38" width="8" height="10" fill="white"/>
+  <!-- SHC text -->
+  <text x="50" y="30" font-family="Inter, Arial, sans-serif" font-weight="800" font-size="22" fill="#0D47A1">SHC</text>
+  <!-- Tagline -->
+  <text x="50" y="46" font-family="Inter, Arial, sans-serif" font-weight="400" font-size="8" fill="#1565C0">The Nation's No. 1 Builder</text>
+</svg>

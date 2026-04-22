@@ -1,0 +1,25 @@
+// Prisma schema for State Housing Company Limited
+// Configure your database connection string in .env
+
+// generator client {
+//   provider = "prisma-client-js"
+// }
+//
+// datasource db {
+//   provider = "postgresql"
+//   url      = env("DATABASE_URL")
+// }
+//
+// model Property {
+//   id          String   @id @default(cuid())
+//   name        String
+//   location    String
+//   region      String
+//   price       Float
+//   bedrooms    Int
+//   bathrooms   Int
+//   area        Float
+//   features    String[]
+//   createdAt   DateTime @default(now())
+//   updatedAt   DateTime @updatedAt
+// }
