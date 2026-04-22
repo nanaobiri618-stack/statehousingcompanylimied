@@ -28,7 +28,7 @@ const services = [
     description:
       "From concept to completion, we deliver world-class residential and commercial buildings. Our in-house architecture team designs homes that blend modern aesthetics with Ghanaian cultural sensibilities.",
     icon: Building2,
-    image: "/images/BUILDING CONSRUCION AND ARCHITECTURE.webp",
+    image: "/images/building-construction-architecture.webp",
     features: [
       "Custom residential design",
       "Commercial building construction",
@@ -43,7 +43,7 @@ const services = [
     description:
       "We breathe new life into existing structures. Whether it's a complete renovation or routine maintenance, our skilled team ensures your property remains in top condition.",
     icon: Wrench,
-    image: "/images/BUILDING RENOVAION AND MAINTENANCE MANAGEMENT.webp",
+    image: "/images/building-renovation-maintenance.webp",
     features: [
       "Full-scale building renovation",
       "Plumbing & electrical upgrades",
@@ -58,7 +58,7 @@ const services = [
     description:
       "Quality flooring and roofing solutions that stand the test of time. We source premium materials and employ expert craftsmen for lasting results.",
     icon: Layers,
-    image: "/images/FLOORING AND ROOFING.webp",
+    image: "/images/flooring-roofing.webp",
     features: [
       "Premium tile & marble flooring",
       "Concrete & terrazzo finishing",
@@ -73,7 +73,7 @@ const services = [
     description:
       "We partner with leading financial institutions including Republic Bank to help you secure mortgage financing for your dream home. Our team simplifies the process and guides you every step of the way.",
     icon: Banknote,
-    image: "/images/MORTAGEFACILITATION.png",
+    image: "/images/mortgage-facilitation.png",
     features: [
       "Partnership with Republic Bank & others",
       "Mortgage pre-qualification assistance",
@@ -101,10 +101,10 @@ export default function ServicesPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ImageSlider
             images={[
-              "/images/BUILDING CONSRUCION AND ARCHITECTURE.webp",
-              "/images/BUILDING RENOVAION AND MAINTENANCE MANAGEMENT.webp",
-              "/images/FLOORING AND ROOFING.webp",
-              "/images/MORTAGEFACILITATION.png",
+              "/images/building-construction-architecture.webp",
+              "/images/building-renovation-maintenance.webp",
+              "/images/flooring-roofing.webp",
+              "/images/mortgage-facilitation.png",
             ]}
             autoPlay={true}
             interval={5000}

@@ -2,10 +2,12 @@ services:
   - type: web
     name: statehousing
     env: node
-    buildCommand: npm install && npm run build
-    startCommand: npm run start
+    buildCommand: npm install && npm run build && cp -r public .next/standalone/public && cp -r .next/static .next/standalone/.next/static
+    startCommand: node .next/standalone/server.js
     envVars:
       - key: NODE_VERSION
         value: 18
       - key: PORT
         value: 3000
+      - key: NODE_ENV
+        value: production
