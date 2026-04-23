@@ -13,63 +13,63 @@ const allLeaders = [
     role: "Chairman of the Board",
     category: "Board",
     history: "Inaugurated as Chairman in mid-2025, Mr. Roland provides the strategic direction and policy oversight required to steer SHC toward massive urban development and public-private partnerships.",
-    image: "/images/ourteam.jpg"
+    image: "/images/profileimages/ralph-roland.png"
   },
   {
     name: "Mr. John S. Bawah",
     role: "Managing Director / Board Member",
     category: "Management",
     history: "A dual-role leader, Mr. Bawah manages daily operations and bridges the gap between board policy and construction. He is the architect of the current 'Nation's No. 1 Builder' revitalization campaign.",
-    image: "/images/ourteam1.jpg"
+    image: "/images/profileimages/john-s-bawah.png"
   },
   {
     name: "Nana Nuben Sra III",
     role: "Board Member",
     category: "Board",
     history: "Bringing essential traditional insight, Nana Nuben Sra III facilitates critical land negotiations and ensures harmonious relationships between SHC and local communities.",
-    image: "/images/ourteam.jpg"
+    image: "/images/profileimages/nana-nuben-sra-iii.png"
   },
   {
     name: "Mr. Kofi Boamah Mensah",
     role: "Board Member",
     category: "Board",
     history: "A financial strategist on the board, Mr. Mensah oversees audit compliance and ensures the company's long-term financial sustainability for future housing projects.",
-    image: "/images/ourteam1.jpg"
+    image: "/images/profileimages/kofi-boamah-mensah.png"
   },
   {
     name: "Mr. Chris Pobee Abbey",
     role: "Board Member",
     category: "Board",
     history: "With a background in technical excellence, Mr. Abbey advises the board on construction standards and innovative building technologies to reduce costs for Ghanaians.",
-    image: "/images/ourteam.jpg"
+    image: "/images/profileimages/chris-pobee-abbey.png"
   },
   {
     name: "Mr. Michael Atta Agyei",
     role: "Board Member",
     category: "Board",
     history: "Focuses on corporate governance and administrative efficiency, ensuring that SHC operations align with national legal frameworks and transparent practices.",
-    image: "/images/ourteam1.jpg"
+    image: "/images/profileimages/michael-atta-agyei.png"
   },
   {
     name: "Mr. Barnabas Ninfom Tanaab",
     role: "Board Member",
     category: "Board",
     history: "A strong advocate for regional balance, Mr. Tanaab focuses on expanding the State Housing footprint into the Northern and Savannah sectors of the country.",
-    image: "/images/ourteam.jpg"
+    image: "/images/profileimages/barnabas-ninfom-tanaab.png"
   },
   {
     name: "Nana Agyekum Kusi Ababio",
     role: "Board Member",
     category: "Board",
     history: "Focuses on social housing impact and community engagement, ensuring that SHC estates provide more than just shelter, but integrated community living.",
-    image: "/images/ourteam1.jpg"
+    image: "/images/profileimages/nana-agyekum-kusi-ababio.png"
   },
   {
     name: "Mr. Nurudeen Issifu Haruna",
     role: "Board Member",
     category: "Board",
     history: "Specializes in Public-Private Partnerships (PPP), helping SHC explore external investments to accelerate affordable housing delivery.",
-    image: "/images/ourteam.jpg"
+    image: "/images/profileimages/nurudeen-issifu-haruna.png"
   },
 
   // --- 2. EXECUTIVE MANAGEMENT ---
@@ -78,21 +78,21 @@ const allLeaders = [
     role: "Head of Human Resources",
     category: "Management",
     history: "Modernizing the SHC workforce from the Accra head office, Gloria focuses on talent development and creating a high-performance culture across all regional and zonal offices.",
-    image: "/images/ourteam1.jpg"
+    image: "/images/profileimages/gloria-arthur.png"
   },
   {
     name: "Margaret Zokli",
     role: "Head of Administration",
     category: "Management",
     history: "The operational engine of SHC, Margaret manages the logistics, fleet, and corporate administration necessary to support massive housing projects nationwide.",
-    image: "/images/ourteam.jpg"
+    image: "/images/profileimages/margaret-zokli.png"
   },
   {
     name: "Esq. Rita A. Fofie",
     role: "Head of Legal",
     category: "Management",
     history: "As the lead legal strategist, Esq. Fofie ensures all property titles are secure and litigation-free, protecting the investments of every State Housing homeowner.",
-    image: "/images/ourteam1.jpg"
+    image: "/images/profileimages/rita-a-fofie.png"
   }
 ];
 
@@ -101,9 +101,13 @@ export default function TeamBiographies() {
     <>
       {/* Hero */}
       <section className="relative bg-gradient-to-br from-shc-blue via-blue-600 to-shc-dark text-white py-20 overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-20 left-10 w-72 h-72 bg-white rounded-full blur-3xl" />
-          <div className="absolute bottom-20 right-10 w-96 h-96 bg-white rounded-full blur-3xl" />
+        <div className="absolute inset-0 opacity-20">
+          <img 
+            src="/images/profileimages/team-award.png" 
+            alt="SHC Team" 
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-br from-shc-blue/80 via-blue-600/80 to-shc-dark/90" />
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl">
@@ -136,6 +140,9 @@ export default function TeamBiographies() {
                     src={leader.image} 
                     alt={leader.name}
                     className="w-full h-full object-cover group-hover:scale-105 transition-all duration-700"
+                    onError={(e) => {
+                      (e.currentTarget as HTMLImageElement).src = "/images/ourteam.jpg";
+                    }}
                   />
                   <div className="absolute top-4 right-4">
                     <span className={`text-[10px] font-bold px-3 py-1 rounded-full text-white uppercase shadow-md ${leader.category === 'Board' ? 'bg-blue-900' : 'bg-yellow-600'}`}>
